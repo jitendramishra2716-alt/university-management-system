@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign In — Nexus Campus AI</title>
+  <meta name="description" content="Sign in to Nexus — your personalised AI campus assistant."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet"/>
+  <!-- Spline 3D Viewer -->
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.82/build/spline-viewer.js"></script>
+  <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+
+  <!-- ── LEFT PANEL: 3D + Branding ──────────────────── -->
+  <div class="panel-left">
+
+    <!-- Spline 3D Scene -->
+    <div class="spline-wrap" id="spline-wrap">
+      <spline-viewer
+        id="spline-scene"
+        url="https://prod.spline.design/Br7UXJsi9jKBVKAy/scene.splinecode"
+        loading-anim-type="none"
+        style="width:100%;height:100%;"
+      ></spline-viewer>
+      <!-- Gradient fade-out at bottom -->
+      <div class="spline-fade"></div>
+    </div>
+
+    <!-- Overlay branding -->
+    <div class="left-brand">
+      <a href="index.html" class="logo-link">
+        <div class="logo-mark">N</div>
+        <span class="logo-text">nexus</span>
+      </a>
+      <div class="left-tagline">
+        <h1>Your campus,<br/><em>understood.</em></h1>
+        <p>AI that knows your branch, your schedule, and your space — before you even ask. Personalised for every student. 🎓</p>
+      </div>
+      <div class="left-stats">
+        <div class="ls"><span>12k+</span> Students</div>
+        <div class="ls-div"></div>
+        <div class="ls"><span>40+</span> Colleges</div>
+        <div class="ls-div"></div>
+        <div class="ls"><span>24/7</span> Active</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RIGHT PANEL: Login Form ────────────────────── -->
+  <div class="panel-right">
+    <div class="form-container">
+
+      <!-- Mobile logo -->
+      <a href="index.html" class="mobile-logo">
+        <div class="logo-mark sm">N</div>
+        <span class="logo-text">nexus</span>
+      </a>
+
+      <!-- Tab switcher -->
+      <div class="auth-tabs">
+        <button class="auth-tab active" id="tab-login">Sign In</button>
+        <button class="auth-tab" id="tab-signup">New Student</button>
+      </div>
+
+      <!-- ── LOGIN FORM ──────────────────────── -->
+      <form id="login-form" class="auth-form active" autocomplete="off">
+        <div class="form-group">
+          <label for="login-roll">Roll Number / Student ID</label>
+          <div class="input-wrap">
+            <span class="input-icon">🎓</span>
+            <input type="text" id="login-roll" placeholder="e.g. 22CSE001" required/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="login-branch">Branch</label>
+          <div class="input-wrap select-wrap">
+            <span class="input-icon">📚</span>
+            <select id="login-branch" required>
+              <option value="" disabled selected>Select your branch</option>
+              <option value="CSE">Computer Science Engineering (CSE)</option>
+              <option value="IT">Information Technology (IT)</option>
+              <option value="ECE">Electronics & Communication (ECE)</option>
+              <option value="EEE">Electrical Engineering (EEE)</option>
+              <option value="ME">Mechanical Engineering (ME)</option>
+              <option value="CE">Civil Engineering (CE)</option>
+              <option value="BBA">Business Administration (BBA)</option>
+              <option value="MBA">Master of Business Admin (MBA)</option>
+              <option value="BCA">Bachelor of Computer Apps (BCA)</option>
+              <option value="MCA">Master of Computer Apps (MCA)</option>
+              <option value="BCOM">B.Com / M.Com</option>
+              <option value="BSc">B.Sc (Sciences)</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="login-year">Academic Year</label>
+          <div class="input-wrap select-wrap">
+            <span class="input-icon">📅</span>
+            <select id="login-year" required>
+              <option value="" disabled selected>Select year</option>
+              <option value="1">1st Year</option>
+              <option value="2">2nd Year</option>
+              <option value="3">3rd Year</option>
+              <option value="4">4th Year</option>
+              <option value="PG">Post Graduate</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="login-pass">Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="login-pass" placeholder="Enter your password" required/>
+            <button type="button" class="toggle-pass" id="toggle-pass" aria-label="Toggle password">
+              <svg id="eye-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="form-meta">
+          <label class="check-label">
+            <input type="checkbox" id="remember-me"/> Remember me
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+        <button type="submit" class="btn-auth" id="login-btn">
+          <span class="btn-text">Sign In to Nexus</span>
+          <span class="btn-loader" id="login-loader"></span>
+        </button>
+        <p class="demo-hint">
+          Demo: Roll <strong>22CSE001</strong>, Branch <strong>CSE</strong>, Year <strong>2</strong>, Password <strong>nexus123</strong>
+        </p>
+      </form>
+
+      <!-- ── SIGNUP FORM ─────────────────────── -->
+      <form id="signup-form" class="auth-form" autocomplete="off">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="su-name">Full Name</label>
+            <div class="input-wrap">
+              <span class="input-icon">👤</span>
+              <input type="text" id="su-name" placeholder="Rahul Sharma" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="su-roll">Roll Number</label>
+            <div class="input-wrap">
+              <span class="input-icon">🎓</span>
+              <input type="text" id="su-roll" placeholder="22CSE001" required/>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="su-email">College Email</label>
+          <div class="input-wrap">
+            <span class="input-icon">📧</span>
+            <input type="email" id="su-email" placeholder="rahul@college.edu.in" required/>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="su-branch">Branch</label>
+            <div class="input-wrap select-wrap">
+              <span class="input-icon">📚</span>
+              <select id="su-branch" required>
+                <option value="" disabled selected>Select branch</option>
+                <option value="CSE">CSE</option>
+                <option value="IT">IT</option>
+                <option value="ECE">ECE</option>
+                <option value="EEE">EEE</option>
+                <option value="ME">ME</option>
+                <option value="CE">Civil</option>
+                <option value="BBA">BBA</option>
+                <option value="MBA">MBA</option>
+                <option value="BCA">BCA</option>
+                <option value="MCA">MCA</option>
+                <option value="BCOM">B.Com</option>
+                <option value="BSc">B.Sc</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="su-year">Year</label>
+            <div class="input-wrap select-wrap">
+              <span class="input-icon">📅</span>
+              <select id="su-year" required>
+                <option value="" disabled selected>Year</option>
+                <option value="1">1st</option>
+                <option value="2">2nd</option>
+                <option value="3">3rd</option>
+                <option value="4">4th</option>
+                <option value="PG">PG</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="su-pass">Create Password</label>
+          <div class="input-wrap">
+            <span class="input-icon">🔒</span>
+            <input type="password" id="su-pass" placeholder="Min. 8 characters" required/>
+          </div>
+          <div class="pass-strength" id="pass-strength">
+            <div class="strength-bar" id="strength-bar"></div>
+          </div>
+          <span class="strength-label" id="strength-label"></span>
+        </div>
+        <button type="submit" class="btn-auth" id="signup-btn">
+          <span class="btn-text">Create My Account</span>
+          <span class="btn-loader" id="signup-loader"></span>
+        </button>
+      </form>
+
+      <!-- Success Toast -->
+      <div class="auth-toast" id="auth-toast"></div>
+
+    </div>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>
