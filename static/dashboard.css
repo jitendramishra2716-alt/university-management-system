@@ -5,17 +5,17 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:         #0e0d0b;
-  --bg2:        #111010;
-  --surface:    #1a1815;
-  --surface2:   #20201d;
-  --border:     rgba(255,255,255,0.07);
-  --amber:      #d4843a;
-  --amber-lt:   #e9a45e;
-  --amber-dim:  rgba(212,132,58,0.14);
-  --text:       #ede8e0;
-  --muted:      #8a8278;
-  --dim:        #4a4640;
+  --bg:         #090d16;
+  --bg2:        #101726;
+  --surface:    #1e293b;
+  --surface2:   #334155;
+  --border:     rgba(255,255,255,0.18);
+  --amber:      #f59e0b;
+  --amber-lt:   #fbbf24;
+  --amber-dim:  rgba(245,158,11,0.25);
+  --text:       #ffffff;
+  --muted:      #cbd5e1;
+  --dim:        #94a3b8;
   --radius:     12px;
   --radius-lg:  18px;
   --sidebar-w:  220px;
@@ -23,9 +23,9 @@
   --font-sans:  'DM Sans', system-ui, sans-serif;
   --font-head:  'Syne', 'Space Grotesk', system-ui, sans-serif;
   /* Branch accent — overridden by JS */
-  --branch-color:     #d4843a;
-  --branch-dim:       rgba(212,132,58,0.14);
-  --branch-gradient:  linear-gradient(135deg, #d4843a, #e9a45e);
+  --branch-color:     #f59e0b;
+  --branch-dim:       rgba(245,158,11,0.25);
+  --branch-gradient:  linear-gradient(135deg, #f59e0b, #fbbf24);
 }
 
 html, body {

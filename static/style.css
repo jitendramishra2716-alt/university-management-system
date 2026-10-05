@@ -8,22 +8,22 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --bg:          #0e0d0b;
-  --bg2:         #141210;
-  --bg3:         #1a1815;
-  --surface:     #1f1d19;
-  --surface2:    #252320;
-  --border:      rgba(255,255,255,0.07);
+  --bg:          #090d16;
+  --bg2:         #101726;
+  --bg3:         #172033;
+  --surface:     #1e293b;
+  --surface2:    #334155;
+  --border:      rgba(255,255,255,0.18);
 
-  --amber:       #d4843a;
-  --amber-light: #e9a45e;
-  --amber-dim:   rgba(212,132,58,0.18);
-  --teal:        #3a8f8a;
-  --teal-dim:    rgba(58,143,138,0.15);
+  --amber:       #f59e0b;
+  --amber-light: #fbbf24;
+  --amber-dim:   rgba(245,158,11,0.25);
+  --teal:        #06b6d4;
+  --teal-dim:    rgba(6,182,212,0.2);
 
-  --text-main:   #ede8e0;
-  --text-muted:  #8a8278;
-  --text-dim:    #5a5650;
+  --text-main:   #ffffff;
+  --text-muted:  #cbd5e1;
+  --text-dim:    #94a3b8;
 
   --radius:      14px;
   --radius-sm:   8px;
@@ -33,8 +33,8 @@
   --font-sans:   'DM Sans', system-ui, sans-serif;
   --font-head:   'Space Grotesk', system-ui, sans-serif;
 
-  --shadow:      0 8px 32px rgba(0,0,0,0.5);
-  --glow-amber:  0 0 40px rgba(212,132,58,0.2);
+  --shadow:      0 8px 32px rgba(0,0,0,0.6);
+  --glow-amber:  0 0 40px rgba(245,158,11,0.3);
 }
 
 html { scroll-behavior: smooth; }

@@ -13,18 +13,18 @@ const { name = 'Student', branch = 'CSE', year = '2', roll = '' } = student;
 
 // ── BRANCH THEME SYSTEM ────────────────────
 const BRANCH_THEMES = {
-  CSE:  { color: '#3b82f6', grad: 'linear-gradient(135deg, #3b82f6, #6366f1)', dim: 'rgba(59,130,246,0.14)', label: 'Computer Science Eng.' },
-  IT:   { color: '#6366f1', grad: 'linear-gradient(135deg, #6366f1, #8b5cf6)', dim: 'rgba(99,102,241,0.14)', label: 'Information Technology' },
-  ECE:  { color: '#a855f7', grad: 'linear-gradient(135deg, #a855f7, #d946ef)', dim: 'rgba(168,85,247,0.14)', label: 'Electronics & Comm.' },
-  EEE:  { color: '#8b5cf6', grad: 'linear-gradient(135deg, #8b5cf6, #a855f7)', dim: 'rgba(139,92,246,0.14)', label: 'Electrical Engineering' },
-  ME:   { color: '#f97316', grad: 'linear-gradient(135deg, #f97316, #fb923c)', dim: 'rgba(249,115,22,0.14)',  label: 'Mechanical Engineering' },
-  CE:   { color: '#84cc16', grad: 'linear-gradient(135deg, #84cc16, #a3e635)', dim: 'rgba(132,204,22,0.14)',  label: 'Civil Engineering' },
-  BBA:  { color: '#10b981', grad: 'linear-gradient(135deg, #10b981, #34d399)', dim: 'rgba(16,185,129,0.14)',  label: 'Business Administration' },
-  MBA:  { color: '#059669', grad: 'linear-gradient(135deg, #059669, #10b981)', dim: 'rgba(5,150,105,0.14)',   label: 'Master of Business Admin' },
-  BCA:  { color: '#0ea5e9', grad: 'linear-gradient(135deg, #0ea5e9, #38bdf8)', dim: 'rgba(14,165,233,0.14)',  label: 'Bachelor of Computer Apps' },
-  MCA:  { color: '#06b6d4', grad: 'linear-gradient(135deg, #06b6d4, #22d3ee)', dim: 'rgba(6,182,212,0.14)',   label: 'Master of Computer Apps' },
-  BCOM: { color: '#f59e0b', grad: 'linear-gradient(135deg, #f59e0b, #fbbf24)', dim: 'rgba(245,158,11,0.14)',  label: 'B.Com / M.Com' },
-  BSc:  { color: '#14b8a6', grad: 'linear-gradient(135deg, #14b8a6, #2dd4bf)', dim: 'rgba(20,184,166,0.14)',  label: 'B.Sc Sciences' },
+  CSE:  { color: '#3b82f6', grad: 'linear-gradient(135deg, #3b82f6, #6366f1)', dim: 'rgba(59,130,246,0.25)', label: 'Computer Science Eng.' },
+  IT:   { color: '#6366f1', grad: 'linear-gradient(135deg, #6366f1, #8b5cf6)', dim: 'rgba(99,102,241,0.25)', label: 'Information Technology' },
+  ECE:  { color: '#a855f7', grad: 'linear-gradient(135deg, #a855f7, #d946ef)', dim: 'rgba(168,85,247,0.25)', label: 'Electronics & Comm.' },
+  EEE:  { color: '#8b5cf6', grad: 'linear-gradient(135deg, #8b5cf6, #a855f7)', dim: 'rgba(139,92,246,0.25)', label: 'Electrical Engineering' },
+  ME:   { color: '#f97316', grad: 'linear-gradient(135deg, #f97316, #fb923c)', dim: 'rgba(249,115,22,0.25)',  label: 'Mechanical Engineering' },
+  CE:   { color: '#84cc16', grad: 'linear-gradient(135deg, #84cc16, #a3e635)', dim: 'rgba(132,204,22,0.25)',  label: 'Civil Engineering' },
+  BBA:  { color: '#10b981', grad: 'linear-gradient(135deg, #10b981, #34d399)', dim: 'rgba(16,185,129,0.25)',  label: 'Business Administration' },
+  MBA:  { color: '#059669', grad: 'linear-gradient(135deg, #059669, #10b981)', dim: 'rgba(5,150,105,0.25)',   label: 'Master of Business Admin' },
+  BCA:  { color: '#0ea5e9', grad: 'linear-gradient(135deg, #0ea5e9, #38bdf8)', dim: 'rgba(14,165,233,0.25)',  label: 'Bachelor of Computer Apps' },
+  MCA:  { color: '#06b6d4', grad: 'linear-gradient(135deg, #06b6d4, #22d3ee)', dim: 'rgba(6,182,212,0.25)',   label: 'Master of Computer Apps' },
+  BCOM: { color: '#f59e0b', grad: 'linear-gradient(135deg, #f59e0b, #fbbf24)', dim: 'rgba(245,158,11,0.25)',  label: 'B.Com / M.Com' },
+  BSc:  { color: '#14b8a6', grad: 'linear-gradient(135deg, #14b8a6, #2dd4bf)', dim: 'rgba(20,184,166,0.25)',  label: 'B.Sc Sciences' },
 };
 
 const theme = BRANCH_THEMES[branch] || BRANCH_THEMES['CSE'];
