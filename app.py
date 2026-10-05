@@ -256,6 +256,12 @@ def index():
 def serve_static(path):
     return send_from_directory(app.static_folder, path)
 
+@app.route('/<path:filename>')
+def serve_root_file(filename):
+    if os.path.exists(os.path.join(app.static_folder, filename)):
+        return send_from_directory(app.static_folder, filename)
+    return send_from_directory(app.static_folder, 'index.html')
+
 @app.route('/api/map', methods=['GET'])
 def get_map():
     return jsonify(router.get_map_data())
